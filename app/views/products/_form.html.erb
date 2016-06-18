@@ -13,6 +13,12 @@
     </p>
 
     <p>
+      <%= f.label :product_type %>
+      <%= f.text_field :product_type, class: "form-control" %>
+      <%= error_tag @product, :product_type %>
+    </p>
+
+    <p>
       <%= f.label :price %>
       <%= f.text_field :price, class: "form-control" %>
       <%= error_tag @product, :price %>

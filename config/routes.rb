@@ -55,4 +55,5 @@ Rails.application.routes.draw do
   #   end
   resources :products
   resources :transactiontypes
+  resources :transactions
 end

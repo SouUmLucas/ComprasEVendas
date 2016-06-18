@@ -1,0 +1,41 @@
+<h1>Produtos</h1>
+
+<div id="content">
+  <div id="tabela" class="table-responsive">
+    <table class="table-striped">
+      <thead>
+        <tr>
+          <th><%= t 'transactions.id' %></th>
+          <th><%= t 'transactions.product_id' %></th>
+          <th><%= t 'transactions.transactiontype_id' %></th>
+          <th><%= t 'transactions.amount' %></th>
+          <th><%= t 'transactions.product_price' %></th>
+          <th><%= t 'transactions.total_price' %></th>
+          <th colspan="10"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @transactions.each do |transaction| %>
+          <tr>
+            <td><%= transaction.id %></td>
+            <td><%= transaction.product_id %></td>
+            <td><%= transaction.transactiontype_id %></td>
+            <td><%= transaction.amount %></td>
+            <td><%= transaction.product_price %></td>
+            <td><%= transaction.total_price %></td>
+            <td>
+              <div class="btn-group" role="group">
+                <%= link_to t('layout.view'), transaction, class: 'btn btn-default btn-reponsive' %>
+                <%= link_to t('layout.editing'), edit_transaction_path(transaction), class: 'btn btn-default btn-responsive' %>
+                <%= link_to t('layout.delete'), transaction, method: :delete, class: 'btn btn-danger btn-responsive', data:{confirm: 'Você tem certeza?'} %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="#" onclick="this.style.backgroundColor='#009900';this.style.color='#FFFFFF';">Paint it green</a>
+</div>

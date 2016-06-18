@@ -8,6 +8,7 @@
           <th><%= t 'products.id' %></th>
           <th><%= t 'products.description' %></th>
           <th><%= t 'products.price' %></th>
+          <th><%= t 'products.product_type' %></th>
           <th colspan="10"></th>
         </tr>
       </thead>
@@ -18,7 +19,7 @@
             <td><%= product.id %></td>
             <td><%= product.description %></td>
             <td><%= product.price %></td>
-
+            <td><%= product.product_type %></td>
             <td>
               <div class="btn-group" role="group">
                 <%= link_to t('layout.view'), product, class: 'btn btn-default btn-reponsive' %>
@@ -31,4 +32,6 @@
       </tbody>
     </table>
   </div>
+
+  <a href="#" onclick="this.style.backgroundColor='#009900';this.style.color='#FFFFFF';">Paint it green</a>
 </div>

@@ -33,7 +33,7 @@ class ProductsController < ApplicationController
     if @product.update(product_params)
       redirect_to @product, notice: 'Produto atualizado com sucesso'
     else
-      render action: edit
+      render action: :edit
     end
   end
 
@@ -49,6 +49,6 @@ class ProductsController < ApplicationController
     end
 
     def product_params
-      params.require(:product).permit(:description, :price)
+      params.require(:product).permit(:description, :price, :product_type)
     end
 end
