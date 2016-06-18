@@ -1,0 +1,15 @@
+<div id="content">
+  <h1>Produto <%= @product.id %></h1>
+
+  <ul>
+    <li>Descrição: <%= @product.description %></li>
+    <li>Preço: <%= @product.price %></li>
+  </ul>
+</div>
+
+<div align="center">
+  <div class="btn-group" role="group" aria-label="Navigation">
+    <%= link_to 'Editar produto', edit_product_path(@product), class: 'btn btn-primary' %>
+    <%= link_to 'Home', products_url, class: 'btn btn-primary' %>
+  </div>
+</div>

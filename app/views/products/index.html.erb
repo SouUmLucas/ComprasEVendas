@@ -1,0 +1,34 @@
+<h1>Produtos</h1>
+
+<div id="content">
+  <div id="tabela" class="table-responsive">
+    <table class="table-striped">
+      <thead>
+        <tr>
+          <th><%= t 'products.id' %></th>
+          <th><%= t 'products.description' %></th>
+          <th><%= t 'products.price' %></th>
+          <th colspan="10"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @products.each do |product| %>
+          <tr>
+            <td><%= product.id %></td>
+            <td><%= product.description %></td>
+            <td><%= product.price %></td>
+
+            <td>
+              <div class="btn-group" role="group">
+                <%= link_to t('layout.view'), product, class: 'btn btn-default btn-reponsive' %>
+                <%= link_to t('layout.editing'), edit_product_path(product), class: 'btn btn-default btn-responsive' %>
+                <%= link_to t('layout.delete'), product, method: :delete, class: 'btn btn-danger btn-responsive', data:{confirm: 'Você tem certeza?'} %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+</div>
