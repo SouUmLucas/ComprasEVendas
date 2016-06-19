@@ -11,10 +11,26 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160618164824) do
+ActiveRecord::Schema.define(version: 20160619014834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "negotiations", force: :cascade do |t|
+    t.integer  "product_id"
+    t.integer  "negotiationtype_id"
+    t.integer  "amount"
+    t.decimal  "total_price"
+    t.datetime "created_at",         null: false
+    t.datetime "updated_at",         null: false
+    t.decimal  "product_price"
+  end
+
+  create_table "negotiationtypes", force: :cascade do |t|
+    t.string   "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
 
   create_table "products", force: :cascade do |t|
     t.string   "description"
@@ -24,24 +40,6 @@ ActiveRecord::Schema.define(version: 20160618164824) do
     t.string   "product_type"
   end
 
-  create_table "transactions", force: :cascade do |t|
-    t.integer  "product_id"
-    t.integer  "transactiontype_id"
-    t.integer  "amount"
-    t.decimal  "total_price"
-    t.datetime "created_at",         null: false
-    t.datetime "updated_at",         null: false
-    t.decimal  "product_price"
-  end
-
-  add_index "transactions", ["product_id"], name: "index_transactions_on_product_id", using: :btree
-
-  create_table "transactiontypes", force: :cascade do |t|
-    t.string   "description"
-    t.datetime "created_at",  null: false
-    t.datetime "updated_at",  null: false
-  end
-
-  add_foreign_key "transactions", "products"
-  add_foreign_key "transactions", "transactiontypes"
+  add_foreign_key "negotiations", "negotiationtypes"
+  add_foreign_key "negotiations", "products"
 end

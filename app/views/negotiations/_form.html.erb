@@ -1,0 +1,44 @@
+<%= form_for [@negotiation] do |f| %>
+
+    <% if @negotiation.errors.any? %>
+        <div id="error_explanation" class="alert alert-danger">
+          <%= t 'general.form_error' %>
+        </div>
+    <% end %>
+
+    <p>
+      <%= f.label :product_id %>
+
+      <%= f.collection_select :product_id, Product.all, :id, :description, id: "product_id" %>
+      <input type="text" name="product_description" id="product_description" readonly>
+      <input type="text" name="product_type" id="product_type" readonly>
+      <%= error_tag @negotiation, :product_id %>
+    </p>
+
+    <p>
+      <%= f.label :negotiationtype_id %>
+      <%= f.text_field :negotiationtype_id, class: "form-control", id: "negotiationtype_id" %>
+      <input type="text" name="negotiationtype_description" id="negotiationtype_description" readonly>
+      <%= error_tag @negotiation, :negotiationtype_id %>
+    </p>
+
+    <p>
+      <%= f.label :amount %>
+      <%= f.text_field :amount, class: "form-control", id: "amount" %>
+      <%= error_tag @negotiation, :amount %>
+    </p>
+
+    <p>
+      <%= f.label :product_price %>
+      <%= f.text_field :product_price, class: "form-control", id: "product_price" %>
+      <%= error_tag @negotiation, :product_price %>
+    </p>
+
+    <p>
+      <%= f.label :total_price %>
+      <%= f.text_field :total_price, class: "form-control", id: "total_price", :readonly=>true %>
+      <%= error_tag @negotiation, :total_price %>
+    </p>
+
+    <%= f.submit class: "btn btn-default" %>
+<% end %>

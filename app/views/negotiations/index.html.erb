@@ -1,0 +1,45 @@
+<h1>Negociações</h1>
+
+<div id="content">
+  <div id="tabela" class="table-responsive">
+    <table class="table-striped">
+      <thead>
+        <tr>
+          <th><%= t 'negotiations.id' %></th>
+          <th>Tipo de transação</th>
+          <th><%= t 'negotiations.product_id' %></th>
+          <th>Descrição</th>
+          <th>Tipo de produto</th>
+          <th><%= t 'negotiations.amount' %></th>
+          <th><%= t 'negotiations.product_price' %></th>
+          <th><%= t 'negotiations.total_price' %></th>
+          <th colspan="10"></th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <% @negotiations.each do |negotiation| %>
+          <tr>
+            <td><%= negotiation.id %></td>
+            <td><%= negotiation.negotiationtype.description %></td>
+            <td><%= negotiation.product_id %></td>
+            <td><%= negotiation.product.description %></td>
+            <td><%= negotiation.product.product_type %></td>
+            <td><%= negotiation.amount %></td>
+            <td><%= negotiation.product_price %></td>
+            <td><%= negotiation.total_price %></td>
+            <td>
+              <div class="btn-group" role="group">
+                <%= link_to t('layout.view'), negotiation, class: 'btn btn-default btn-reponsive' %>
+                <%= link_to t('layout.editing'), edit_negotiation_path(negotiation), class: 'btn btn-default btn-responsive' %>
+                <%= link_to t('layout.delete'), negotiation, method: :delete, class: 'btn btn-danger btn-responsive', data:{confirm: 'Você tem certeza?'} %>
+              </div>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+
+  <a href="#" onclick="this.style.backgroundColor='#009900';this.style.color='#FFFFFF';">Paint it green</a>
+</div>

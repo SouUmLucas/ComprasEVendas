@@ -1,0 +1,18 @@
+<div id="content">
+  <h1>Negociação <%= @negotiation.negotiationtype.description %></h1>
+
+  <ul>
+    <li>Produto: <%= @negotiation.product.description %></li>
+    <li>Tipo: <%= @negotiation.product.product_type %></li>
+    <li>Preço: <%= @negotiation.product_price %></li>
+    <li>Quantidade <%= @negotiation.amount %></li>
+    <li>Total <%= @negotiation.total_price %></li>
+  </ul>
+</div>
+
+<div align="center">
+  <div class="btn-group" role="group" aria-label="Navigation">
+    <%= link_to 'Editar negociação', edit_negotiation_path(@negotiation), class: 'btn btn-primary' %>
+    <%= link_to 'Home', negotiations_path, class: 'btn btn-primary' %>
+  </div>
+</div>

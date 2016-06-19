@@ -1,0 +1,14 @@
+<div id="content">
+  <h1>Tipo de negociação <%= @negotiationtype.id %></h1>
+
+  <ul>
+    <li>Descrição: <%= @negotiationtype.description %></li>
+  </ul>
+</div>
+
+<div align="center">
+  <div class="btn-group" role="group" aria-label="Navigation">
+    <%= link_to 'Editar', edit_negotiation_path(@negotiationtype), class: 'btn btn-primary' %>
+    <%= link_to 'Home', negotiationtypes_url, class: 'btn btn-primary' %>
+  </div>
+</div>
