@@ -33,7 +33,6 @@ class NegotiationsController < ApplicationController
   def update
     @negotiation = Negotiation.find(params[:id])
 
-
     if @negotiation.update(negotiation_params)
       redirect_to @negotiation, notice: 'Negociação atualizada com sucesso'
     else
@@ -44,7 +43,7 @@ class NegotiationsController < ApplicationController
   def destroy
     @negotiation = Negotiation.find(params[:id])  # Verificar necessidade
     @negotiation.destroy
-    redirect_to transactions_url
+    redirect_to negotiations_url
   end
 
   private

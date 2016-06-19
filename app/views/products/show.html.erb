@@ -1,16 +1,15 @@
 <div id="content">
-  <h1>Produto <%= @product.id %></h1>
-
+  <h1><%= t 'activerecord.attributes.product.id' %>: <%= @product.id %></h1>
   <ul>
-    <li>Descrição: <%= @product.description %></li>
-    <li>Preço: <%= @product.price %></li>
-    <li>Tipo de produto: <%= @product.product_type %></li>
+    <li><%= t 'activerecord.attributes.product.description' %>: <%= @product.description %></li>
+    <li><%= t 'activerecord.attributes.product.product_type' %>: <%= @product.product_type %></li>
+    <li><%= t 'activerecord.attributes.product.price' %>: <%= number_to_currency @product.price %></li>
   </ul>
 </div>
 
 <div align="center">
   <div class="btn-group" role="group" aria-label="Navigation">
-    <%= link_to 'Editar produto', edit_product_path(@product), class: 'btn btn-primary' %>
-    <%= link_to 'Home', products_url, class: 'btn btn-primary' %>
+    <%= link_to (t 'links.editing'), edit_product_path(@product), class: 'btn btn-primary' %>
+    <%= link_to (t 'links.back'), products_url, class: 'btn btn-primary' %>
   </div>
 </div>

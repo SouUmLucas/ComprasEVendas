@@ -1,13 +1,12 @@
-<h1><%= t '.title' %></h1>
-
-<div id="content">
-  <div id="form" class="section">
+<div id="content" align="center">
+  <h1><%= t 'negotiationtypes.edit.title' %></h1>
+  <div id="form" align="left">
     <%= render 'form' %>
   </div>
 </div>
 
 <div align="center">
   <div class="btn-group" role="group" aria-label="Navigation">
-    <%= link_to 'Voltar', negotiationtype_path, class: 'btn btn-primary btn-outline', role: 'button' %>
+    <%= link_to (t 'links.back'), negotiationtype_path, class: 'btn btn-primary btn-outline', role: 'button' %>
   </div>
 </div>

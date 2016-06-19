@@ -1,12 +1,11 @@
 <div id="content">
-  <h1>Negociação <%= @negotiation.negotiationtype.description %></h1>
-
+  <h1><%= t 'activerecord.attributes.negotiation.negotiationtype_id' %>: <%= @negotiation.negotiationtype.description %></h1>
   <ul>
-    <li>Produto: <%= @negotiation.product.description %></li>
-    <li>Tipo: <%= @negotiation.product.product_type %></li>
-    <li>Preço: <%= @negotiation.product_price %></li>
-    <li>Quantidade <%= @negotiation.amount %></li>
-    <li>Total <%= @negotiation.total_price %></li>
+    <li><%= t 'activerecord.attributes.product.description' %>: <%= @negotiation.product.description %></li>
+    <li><%= t 'activerecord.attributes.product.product_type' %>: <%= @negotiation.product.product_type %></li>
+    <li><%= t 'activerecord.attributes.negotiation.product_price' %>: <%= number_to_currency @negotiation.product_price %></li>
+    <li><%= t 'activerecord.attributes.negotiation.amount' %> <%= @negotiation.amount %></li>
+    <li><%= t 'activerecord.attributes.negotiation.total_price' %> <%= number_to_currency @negotiation.total_price %></li>
   </ul>
 </div>
 

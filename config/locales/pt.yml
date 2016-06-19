@@ -1,0 +1,76 @@
+pt:
+  general:
+    form_error: Por favor, complete o formulário para salvar
+
+  links:
+    new: Novo
+    view: Visualisar
+    editing: Editar
+    delete: Apagar
+    back: Voltar
+
+  layout:
+    system_name: Gerenciamento de negociações
+    registers: Cadastros
+    negotiations: Negociações
+    new_negotiation: Nova negociação
+    products: Produtos
+    negotiationtypes: Tipos de negociações
+    home:
+      welcome: 'Olá! Essa plataforma de gerenciamento de negociações foi desenvolvida como um teste para uma vaga de estágio na Valemobi. Nesse sistema é possivel:'
+      add_negotiations: Adicionar uma negociação
+      view_negotiations: Visualizar negociações
+      add_products: Adicionar produtos
+      view_products: Visualizar produtos
+      add_negotiation_type: Adicionar tipos de negociações
+      view_negotiation_types: Visualizar tipos de negociações
+
+
+  activerecord:
+    models:
+      negotiation: Negociação
+      negotiationtype: Tipo de negociação
+      product: Produto
+    attributes:
+      negotiation:
+        id: ID da Negociação
+        product_id: Produto
+        negotiationtype_id: Tipo de negociação
+        amount: Quantidade
+        product_price: Preço do produto
+        total_price: Preço total
+      negotiationtype:
+        id: ID da negociação
+        description: Descrição
+      product:
+        id: ID do produto
+        description: Nome do produto
+        price: Preço
+        product_type: Tipo de produto
+
+  negotiations:
+    new:
+      title: Nova negociação
+    edit:
+      title: Editar negociação
+    index:
+      title: Negociações
+      delete: Você tem certeza?
+
+  negotiationtypes:
+    new:
+      title: Novo tipo de negociação
+    edit:
+      title: Editar tipo de negociação
+    index:
+      title: Tipos de negociações
+      delete: Você tem certeza? Isso apagará todas as negociações com esse esse tipo de negociação
+
+  products:
+    new:
+      title: Novo produto
+    edit:
+      title: Editar produto
+    index:
+      title: Produtos
+      delete: Você tem certeza? Isso apagará todas as negociações deste produto.

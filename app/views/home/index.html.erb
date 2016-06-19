@@ -1,0 +1,18 @@
+<div id="content">
+  <div class="container">
+    <div class="jumbotron">
+      <h1 class="display-3"><%= t 'layout.system_name' %></h1>
+      <p><%= t 'layout.home.welcome' %></p>
+      <div class="lead">
+        <ul>
+          <li><a href="<%= new_negotiation_path %>"><%= t 'layout.home.add_negotiations' %> </a></li>
+          <li><a href="<%= negotiations_path %>"><%= t 'layout.home.view_negotiations' %></a></li>
+          <li><a href="<%= new_product_path %>"><%= t 'layout.home.add_products' %></a></li>
+          <li><a href="<%= products_path %>"><%= t 'layout.home.view_products' %></a></li>
+          <li><a href="<%= new_negotiationtype_path %>"><%= t 'layout.home.add_negotiation_type' %></a></li>
+          <li><a href="<%= negotiationtypes_path %>"><%= t 'layout.home.view_negotiation_types' %></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>

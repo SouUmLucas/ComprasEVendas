@@ -6,7 +6,7 @@ $(document).on('page:change', function(){
     getNegotiationTypeAttributes();
 
     $("#product_id").change(function(){
-        getProductAttributes();
+        setProductAttributes();
     });
 
     $("#negotiationtype_id").change(function(){
@@ -37,10 +37,17 @@ $(document).on('page:change', function(){
 
 
     function atualizarPreco(){
-        $("#total_price").val($("#product_price").val() * $("#amount").val());
+        $("#total_price").val(+($("#product_price").val() * $("#amount").val()).toFixed(2));
     };
 
     function getProductAttributes(){
+        $.getJSON('/products/' + $("#product_id").val() + '.json', function(data){
+            $("#product_description").val(data.description);
+            $("#product_type").val(data.product_type)
+        });
+    };
+
+    function setProductAttributes(){
         $.getJSON('/products/' + $("#product_id").val() + '.json', function(data){
             $("#product_description").val(data.description);
             $("#product_type").val(data.product_type)

@@ -1,14 +1,13 @@
-<h1>Produtos</h1>
-
 <div id="content">
-  <div id="tabela" class="table-responsive">
+  <h1 align="center"><%= t 'products.index.title' %></h1>
+  <div id="tabela" align="center" class="table-responsive">
     <table class="table-striped">
       <thead>
         <tr>
-          <th><%= t 'products.id' %></th>
-          <th><%= t 'products.description' %></th>
-          <th><%= t 'products.price' %></th>
-          <th><%= t 'products.product_type' %></th>
+          <th><%= t 'activerecord.attributes.product.id' %></th>
+          <th><%= t 'activerecord.attributes.product.description' %></th>
+          <th><%= t 'activerecord.attributes.product.price' %></th>
+          <th><%= t 'activerecord.attributes.product.product_type' %></th>
           <th colspan="10"></th>
         </tr>
       </thead>
@@ -18,20 +17,21 @@
           <tr>
             <td><%= product.id %></td>
             <td><%= product.description %></td>
-            <td><%= product.price %></td>
+            <td><%= number_to_currency product.price %></td>
             <td><%= product.product_type %></td>
             <td>
               <div class="btn-group" role="group">
-                <%= link_to t('layout.view'), product, class: 'btn btn-default btn-reponsive' %>
-                <%= link_to t('layout.editing'), edit_product_path(product), class: 'btn btn-default btn-responsive' %>
-                <%= link_to t('layout.delete'), product, method: :delete, class: 'btn btn-danger btn-responsive', data:{confirm: 'Você tem certeza?'} %>
+                <%= link_to t('links.view'), product, class: 'btn btn-default btn-reponsive' %>
+                <%= link_to t('links.editing'), edit_product_path(product), class: 'btn btn-default btn-responsive' %>
+                <%= link_to t('links.delete'), product, method: :delete, class: 'btn btn-danger btn-responsive', data:{confirm: (t'products.index.delete')} %>
               </div>
             </td>
           </tr>
         <% end %>
       </tbody>
     </table>
+    <div class="btn-group" role="group" aria-label="Navigation">
+      <%= link_to (t 'links.new'), new_product_path, class: 'btn btn-primary' %>
+    </div>
   </div>
-
-  <a href="#" onclick="this.style.backgroundColor='#009900';this.style.color='#FFFFFF';">Paint it green</a>
 </div>

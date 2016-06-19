@@ -8,17 +8,14 @@
 
     <p>
       <%= f.label :product_id %>
-
-      <%= f.collection_select :product_id, Product.all, :id, :description, id: "product_id" %>
-      <input type="text" name="product_description" id="product_description" readonly>
-      <input type="text" name="product_type" id="product_type" readonly>
+      <%= f.collection_select :product_id, Product.all, :id, :description, {}, { id: "product_id", class: "form-control" } %>
+      <input type="text" name="product_type" id="product_type" readonly class="form-control">
       <%= error_tag @negotiation, :product_id %>
     </p>
 
     <p>
       <%= f.label :negotiationtype_id %>
-      <%= f.text_field :negotiationtype_id, class: "form-control", id: "negotiationtype_id" %>
-      <input type="text" name="negotiationtype_description" id="negotiationtype_description" readonly>
+      <%= f.collection_select :negotiationtype_id, Negotiationtype.all, :id, :description, {}, { id: "negotiationtype_id", class: "form-control" } %>
       <%= error_tag @negotiation, :negotiationtype_id %>
     </p>
 

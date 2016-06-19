@@ -1,19 +1,17 @@
-<h1>Negociações</h1>
-
 <div id="content">
-  <div id="tabela" class="table-responsive">
+  <h1 align="center"><%= t 'negotiations.index.title' %></h1>
+  <div id="tabela" align="center" class="table-responsive">
     <table class="table-striped">
       <thead>
         <tr>
-          <th><%= t 'negotiations.id' %></th>
-          <th>Tipo de transação</th>
-          <th><%= t 'negotiations.product_id' %></th>
-          <th>Descrição</th>
-          <th>Tipo de produto</th>
-          <th><%= t 'negotiations.amount' %></th>
-          <th><%= t 'negotiations.product_price' %></th>
-          <th><%= t 'negotiations.total_price' %></th>
-          <th colspan="10"></th>
+          <th><%= t 'activerecord.attributes.negotiation.id' %></th>
+          <th><%= t 'activerecord.attributes.negotiation.negotiationtype_id' %></th>
+          <th><%= t 'activerecord.attributes.product.description' %></th>
+          <th><%= t 'activerecord.attributes.product.product_type' %></th>
+          <th><%= t 'activerecord.attributes.negotiation.amount' %></th>
+          <th><%= t 'activerecord.attributes.negotiation.product_price' %></th>
+          <th><%= t 'activerecord.attributes.negotiation.total_price' %></th>
+          <th colspan="50"></th>
         </tr>
       </thead>
 
@@ -22,24 +20,24 @@
           <tr>
             <td><%= negotiation.id %></td>
             <td><%= negotiation.negotiationtype.description %></td>
-            <td><%= negotiation.product_id %></td>
             <td><%= negotiation.product.description %></td>
             <td><%= negotiation.product.product_type %></td>
             <td><%= negotiation.amount %></td>
-            <td><%= negotiation.product_price %></td>
-            <td><%= negotiation.total_price %></td>
+            <td><%= number_to_currency negotiation.product_price %></td>
+            <td><%= number_to_currency negotiation.total_price %></td>
             <td>
               <div class="btn-group" role="group">
-                <%= link_to t('layout.view'), negotiation, class: 'btn btn-default btn-reponsive' %>
-                <%= link_to t('layout.editing'), edit_negotiation_path(negotiation), class: 'btn btn-default btn-responsive' %>
-                <%= link_to t('layout.delete'), negotiation, method: :delete, class: 'btn btn-danger btn-responsive', data:{confirm: 'Você tem certeza?'} %>
+                <%= link_to t('links.view'), negotiation, class: 'btn btn-default btn-reponsive' %>
+                <%= link_to t('links.editing'), edit_negotiation_path(negotiation), class: 'btn btn-default btn-responsive' %>
+                <%= link_to t('links.delete'), negotiation, method: :delete, class: 'btn btn-danger btn-responsive', data:{confirm: (t'negotiations.index.delete')} %>
               </div>
             </td>
           </tr>
         <% end %>
       </tbody>
     </table>
+    <div class="btn-group" role="group" aria-label="Navigation">
+      <%= link_to (t 'links.new'), new_negotiation_path, class: 'btn btn-primary' %>
+    </div>
   </div>
-
-  <a href="#" onclick="this.style.backgroundColor='#009900';this.style.color='#FFFFFF';">Paint it green</a>
 </div>

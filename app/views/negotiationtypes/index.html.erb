@@ -1,12 +1,11 @@
-<h1>Tipos de transação</h1>
-
 <div id="content">
-  <div id="tabela" class="table-responsive">
+  <h1 align="center"><%= t'negotiationtypes.index.title' %></h1>
+  <div id="tabela" align="center" class="table-responsive">
     <table class="table-striped">
       <thead>
         <tr>
-          <th><%= t 'negotiationtypes.id' %></th>
-          <th><%= t 'negotiationtypes.description' %></th>
+          <th><%= t 'activerecord.attributes.negotiationtype.id' %></th>
+          <th><%= t 'activerecord.attributes.negotiationtype.description' %></th>
           <th colspan="10"></th>
         </tr>
       </thead>
@@ -14,19 +13,22 @@
       <tbody>
         <% @negotiationtypes.each do |negotiationtype| %>
           <tr>
-            <td><%= negotiationtype.id %></td>
-            <td><%= negotiationtype.description %></td>
+            <td class="col-md-2"><%= negotiationtype.id %></td>
+            <td class="col-md-5"><%= negotiationtype.description %></td>
 
             <td>
               <div class="btn-group" role="group">
-                <%= link_to t('layout.view'), negotiationtype, class: 'btn btn-default btn-reponsive' %>
-                <%= link_to t('layout.editing'), edit_negotiationtype_path(negotiationtype), class: 'btn btn-default btn-responsive' %>
-                <%= link_to t('layout.delete'), negotiationtype, method: :delete, class: 'btn btn-danger btn-responsive', data:{confirm: 'Você tem certeza?'} %>
+                <%= link_to t('links.view'), negotiationtype, class: 'btn btn-default btn-reponsive' %>
+                <%= link_to t('links.editing'), edit_negotiationtype_path(negotiationtype), class: 'btn btn-default btn-responsive' %>
+                <%= link_to t('links.delete'), negotiationtype, method: :delete, class: 'btn btn-danger btn-responsive', data:{confirm: (t'negotiationtypes.index.delete')} %>
               </div>
             </td>
           </tr>
         <% end %>
       </tbody>
     </table>
+    <div class="btn-group" role="group" aria-label="Navigation">
+      <%= link_to (t 'links.new'), new_negotiationtype_path, class: 'btn btn-primary' %>
+    </div>
   </div>
 </div>
