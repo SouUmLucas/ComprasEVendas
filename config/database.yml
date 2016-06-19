@@ -26,7 +26,9 @@ default: &default
 
 development:
   <<: *default
-  database: CompraEVenda_development
+  host: ec2-54-235-183-28.compute-1.amazonaws.com
+  database: d1mbob1q14shki
+  password: IEfNNtlH8tffpwj_lwJUJDkppZ
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
