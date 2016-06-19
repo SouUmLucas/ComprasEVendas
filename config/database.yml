@@ -19,14 +19,14 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see rails configuration guide
   # http://guides.rubyonrails.org/configuring.html#database-pooling
-  host: localhost
-  username: postgres
-  password: admin
-  port: 5432
 
 development:
   <<: *default
-  database: CompraEVenda_development
+  database: d1mbob1q14shki
+  username: yzhqaogxesctch
+  password: IEfNNtlH8tffpwj_lwJUJDkppZ
+  host: ec2-54-235-183-28.compute-1.amazonaws.com
+  port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
