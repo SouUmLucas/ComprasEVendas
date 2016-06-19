@@ -25,11 +25,11 @@ default: &default
   port: 5432
 
 development:
-  <<: *default
-  host: ec2-54-235-183-28.compute-1.amazonaws.com
-  username: yzhqaogxesctch
   database: d1mbob1q14shki
+  username: yzhqaogxesctch
   password: IEfNNtlH8tffpwj_lwJUJDkppZ
+  host: ec2-54-235-183-28.compute-1.amazonaws.com
+  port: 5432
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
