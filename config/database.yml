@@ -25,6 +25,7 @@ default: &default
   port: 5432
 
 development:
+  <<: *default
   database: d1mbob1q14shki
   username: yzhqaogxesctch
   password: IEfNNtlH8tffpwj_lwJUJDkppZ
