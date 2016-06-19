@@ -21,16 +21,12 @@ default: &default
   # http://guides.rubyonrails.org/configuring.html#database-pooling
   host: localhost
   username: postgres
-  passwaord: admin
+  password: admin
   port: 5432
 
 development:
   <<: *default
-  database: d1mbob1q14shki
-  username: yzhqaogxesctch
-  password: IEfNNtlH8tffpwj_lwJUJDkppZ
-  host: ec2-54-235-183-28.compute-1.amazonaws.com
-  port: 5432
+  database: CompraEVenda_development
 
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
@@ -87,6 +83,8 @@ test:
 #
 production:
   <<: *default
-  database: CompraEVenda_production
-  username: CompraEVenda
-  password: <%= ENV['COMPRAEVENDA_DATABASE_PASSWORD'] %>
+  database: d1mbob1q14shki
+  username: yzhqaogxesctch
+  password: IEfNNtlH8tffpwj_lwJUJDkppZ
+  host: ec2-54-235-183-28.compute-1.amazonaws.com
+  port: 5432
