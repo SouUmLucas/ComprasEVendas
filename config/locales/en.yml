@@ -16,6 +16,7 @@ en:
     new_negotiation: New negotiation
     products: Products
     negotiationtypes: Negotiation types
+    about: About
     home:
       welcome: 'Hello! This negotiation platform was developed as a test for a internship position at Valemobi. Here you can:'
       add_negotiations: 'Add a new negotiation'

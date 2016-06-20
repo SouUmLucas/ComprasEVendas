@@ -16,6 +16,7 @@ pt:
     new_negotiation: Nova negociação
     products: Produtos
     negotiationtypes: Tipos de negociações
+    about: Sobre
     home:
       welcome: 'Olá! Essa plataforma de gerenciamento de negociações foi desenvolvida como um teste para uma vaga de estágio na Valemobi. Nesse sistema é possivel:'
       add_negotiations: Adicionar uma negociação
