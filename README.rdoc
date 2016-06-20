@@ -1,28 +1,11 @@
-== README
+== Plataforma de negociações de mercadorias (README)
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Plataforma de negociações desenvolvida como um teste para uma vaga de estágio na Valemobi
 
-Things you may want to cover:
+Especificações técnicas
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* Ruby v2.3
+* Rails v4.2.6
+* Banco de dados: PostgreSQL v9.3
 
 * ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
