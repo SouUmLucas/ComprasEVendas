@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8a147155-2e9f-456a-9dc0-7850e00b31cd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20160617225811_create_products.rb" afterPath="$PROJECT_DIR$/db/migrate/20160617225811_create_products.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/db/migrate/20160619011806_remove_index_in_transaction.rb" afterPath="$PROJECT_DIR$/db/migrate/20160619011806_remove_index_in_transaction.rb" />
     </list>
     <ignored path="CompraEVenda.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -101,10 +101,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20160619011806_remove_index_in_transaction.rb" pinned="false" current-in-tab="false">
+      <file leaf-file-name="20160619011806_remove_index_in_transaction.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/db/migrate/20160619011806_remove_index_in_transaction.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0">
+            <state vertical-scroll-proportion="0.21077283">
               <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
               <folding />
             </state>
@@ -121,10 +121,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="20160619014705_rename_transaction_to_negotiation.rb" pinned="false" current-in-tab="true">
+      <file leaf-file-name="20160619014705_rename_transaction_to_negotiation.rb" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/db/migrate/20160619014705_rename_transaction_to_negotiation.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.042154565">
+            <state vertical-scroll-proportion="0.0">
               <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
               <folding />
             </state>
@@ -161,7 +161,6 @@
         <option value="$PROJECT_DIR$/db/migrate/20160619011433_remove_index_in_transaction.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160618160842_add_column_to_products.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160618163534_create_transactions.rb" />
-        <option value="$PROJECT_DIR$/db/migrate/20160619011806_remove_index_in_transaction.rb" />
         <option value="$PROJECT_DIR$/db/migrate/20160619013619_rename_transaction_to_negociation.rb" />
         <option value="$PROJECT_DIR$/app/controllers/negotiationtypes_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/negotiationtypes/_form.html.erb" />
@@ -202,6 +201,7 @@
         <option value="$PROJECT_DIR$/app/views/about/index.html.erb" />
         <option value="$PROJECT_DIR$/config/database.yml" />
         <option value="$PROJECT_DIR$/db/migrate/20160617225811_create_products.rb" />
+        <option value="$PROJECT_DIR$/db/migrate/20160619011806_remove_index_in_transaction.rb" />
       </list>
     </option>
   </component>
@@ -1180,6 +1180,22 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20160619014705_rename_transaction_to_negotiation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/db/migrate/20160619013619_rename_transaction_to_negociation.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20160618163534_create_transactions.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1198,24 +1214,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/db/migrate/20160619011806_remove_index_in_transaction.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
+        <state vertical-scroll-proportion="0.21077283">
           <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20160619013619_rename_transaction_to_negociation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/db/migrate/20160619014705_rename_transaction_to_negotiation.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.042154565">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
           <folding />
         </state>
       </provider>
