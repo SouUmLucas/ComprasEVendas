@@ -23,7 +23,7 @@ default: &default
 development:
   <<: *default
   database: CompraEVenda_development
-  username: admin
+  username: postgres
   password: admin
   host: localhost
 
