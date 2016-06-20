@@ -122,8 +122,8 @@
       <file leaf-file-name="database.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/config/database.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.5784543">
-              <caret line="78" column="16" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="16" />
+            <state vertical-scroll-proportion="0.46370023">
+              <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
               <folding />
             </state>
           </provider>
@@ -1168,8 +1168,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/config/database.yml">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.5784543">
-          <caret line="78" column="16" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="16" />
+        <state vertical-scroll-proportion="0.46370023">
+          <caret line="35" column="2" selection-start-line="35" selection-start-column="2" selection-end-line="35" selection-end-column="2" />
           <folding />
         </state>
       </provider>

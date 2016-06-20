@@ -33,6 +33,7 @@ production:
   username: fsdpluogfvnoyt
   password: 3s_10WZcvyixMf_AioEFmCcQs8
   host: ec2-174-129-29-118.compute-1.amazonaws.com
+  url: postgres://fsdpluogfvnoyt:3s_10WZcvyixMf_AioEFmCcQs8@ec2-174-129-29-118.compute-1.amazonaws.com:5432/d93vda7563q53e
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
@@ -80,6 +81,3 @@ production:
 #
 # You can use this database configuration with:
 #
-production:
-   url: postgres://yzhqaogxesctch:IEfNNtlH8tffpwj_lwJUJDkppZ@ec2-54-235-183-28.compute-1.amazonaws.com:5432/d1mbob1q14shki
-
