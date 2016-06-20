@@ -22,17 +22,17 @@ default: &default
 
 development:
   <<: *default
-  database: d1mbob1q14shki
-  username: yzhqaogxesctch
-  password: IEfNNtlH8tffpwj_lwJUJDkppZ
-  host: ec2-54-235-183-28.compute-1.amazonaws.com
+  database: CompraEVenda_development
+  username: admin
+  password: admin
+  host: localhost
 
 production:
   <<: *default
-  database: d1mbob1q14shki
-  username: yzhqaogxesctch
-  password: IEfNNtlH8tffpwj_lwJUJDkppZ
-  host: ec2-54-235-183-28.compute-1.amazonaws.com
+  database: d93vda7563q53e
+  username: fsdpluogfvnoyt
+  password: 3s_10WZcvyixMf_AioEFmCcQs8
+  host: ec2-174-129-29-118.compute-1.amazonaws.com
   # The specified database role being used to connect to postgres.
   # To create additional roles in postgres see `$ createuser --help`.
   # When left blank, postgres will use the default role. This is
