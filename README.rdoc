@@ -2,6 +2,8 @@
 
 Plataforma de negociações desenvolvida como um teste para uma vaga de estágio na Valemobi
 
+Encontra-se em execução em http://comprasevendas.herokuapp.com/
+
 Especificações técnicas
 
 * Ruby v2.3
