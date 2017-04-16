@@ -6,8 +6,6 @@ Encontra-se em execução em http://comprasevendas.herokuapp.com/
 
 Especificações técnicas
 
-* Ruby v2.3
-* Rails v4.2.6
+* Ruby v2.4
+* Rails v5.0.2
 * Banco de dados: PostgreSQL v9.3
-
-* ...
